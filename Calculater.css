@@ -34,3 +34,21 @@
         color: white;
         height: 30px;
 }
+.menu {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+        background-color: #dcd4d4;
+        border: 1px solid #ccc;
+        width: 290px;
+}
+
+.menu li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+}
+
+.hidden {
+        display: none;
+}

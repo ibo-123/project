@@ -24,3 +24,9 @@ function signIn(){
        link.download = "user_data.json"; // File name
        link.click();
 }
+
+  function toggleMenu() {
+    document.getElementById("menu").classList.add("hidden");
+  } 
+
+
