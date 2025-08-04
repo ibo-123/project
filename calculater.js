@@ -26,7 +26,7 @@ function signIn(){
 }
 
   function toggleMenu() {
-    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("menu").classList.toggle("hidden");
   } 
 
 
