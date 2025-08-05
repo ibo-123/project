@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <title> Calculater </title>
-                <link rel="stylesheet" href="Calculater.css">
-        </head>
-        <button onclick="toggleMenu()">☰ Menu</button>
+<head>
+  <title>Calculater</title>
+  <link rel="stylesheet" href="Calculater.css">
+</head>
+<body>
 
-<ul id="menu" class="menu hidden">
-  <li>Home</li>
-  <li>About</li>
-  <li>Services</li>
-  <li>Contact</li>
-</ul>
+  <button onclick="toggleMenu()">☰ Menu</button>
+  <ul id="menu" class="menu hidden">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+    <li><button class="sign" id="signin" onclick="sign()">Sign In</button></li>
+  </ul >
+ 
+ <center>
+  <div id="nameso" class="hidden names">
+    <form >
+      <h2 class="add">Sign In</h2>
+      <p class="Name">First Name:</p>
+      <input type="text" class="iname sname">
+      <p class="Name">Middle Name:</p>
+      <input type="text" class="iname semail">
+      <p class="Name">Last Name:</p>
+      <input type="text" class="iname spassword">
+    </form> <button  onclick="next()" class="first-next">Next </button></div>
+  </center>
 
-      <body> <center>
-        <form class="bar">
-          <h2 class="add">Sign In</h2>
-          <p class="Name">Name:</P>
-            <input type="text" class="iname sname">
-            <p class="Name">Email:<p>
-              <input type="email" class="iname semail">
-              <p class="Name">Password:</p>
-              <input type="password" class="iname spassword">
-              <input type="submit" class="iname sub" onclick="signIn()">
-            </form>
-<p class="display"></p>
-        <script src="calculater.js"></script>
-      </body>
-</html> 
+
+
+
+  <center>
+    <form id="bars" class="bar hidden">
+      <h2 class="add">Sign In</h2>
+      <p class="Name">Codeforce Handle:</p>
+      <input type="text" class="iname sname">
+      <p class="Name">Email:</p>
+      <input type="email" class="iname semail">
+      <p class="Name">Password:</p>
+      <input type="password" class="iname spassword">
+      <input type="submit" class=" sub" onclick="signIn()">
+      <button onclick="back()" class="back-but">Previous</button>
+      <p class="display"></p>
+    </form>
+  </center>
+  <script src="calculater.js"></script>
+</body>
+</html>

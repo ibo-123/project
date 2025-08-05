@@ -1,32 +1,51 @@
-let data={
-        Name:[],
-        Email:[],
-        Password:[]
+let data = {
+  Name: [],
+  Email: [],
+  Password: []
+};
+
+function signIn() {
+  // get values from the second form (bars)
+  const handle = document.getElementById("handle").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  // push data (you can change how you structure this)
+  data.Name.push(handle);
+  data.Email.push(email);
+  data.Password.push(password);
+
+  const jsonString = JSON.stringify(data, null, 2);
+
+  // Create a Blob and download
+  const blob = new Blob([jsonString], {
+    type: "application/json"
+  });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "user_data.json";
+  document.body.appendChild(link); // required for Firefox
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
-function signIn(){
-       const name=document.querySelector(".sname").value;
-      const password=document.getElementsByClassName("spassword")[0].value;
-      const email=document.getElementsByClassName("semail")[0].value;
-      
-      data.Name.push(name);
-      data.Email.push(email);
-      data.Password.push(password);
-       const jsonString = JSON.stringify(data, null, 2);
 
-       // Create a Blob from the JSON string
-       const blob = new Blob([jsonString], {
-         type: "application/json"
-       });
-
-       // Create a link and click it
-       const link = document.createElement("a");
-       link.href = URL.createObjectURL(blob);
-       link.download = "user_data.json"; // File name
-       link.click();
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("hidden");
 }
 
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("hidden");
-  } 
+function next() {
+  // hide first form, show second
+  document.getElementById("nameso").classList.add("hidden");
+  document.getElementById("bars").classList.remove("hidden");
+}
 
-
+function back() {
+  // hide second form, show first
+  document.getElementById("bars").classList.add("hidden");
+  document.getElementById("nameso").classList.remove("hidden");
+}
+function sign(){
+  document.getElementById("nameso").classList.remove("hidden");
+}

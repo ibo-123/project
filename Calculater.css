@@ -32,7 +32,9 @@
         position: relative;
         top: 120px;
         color: white;
-        height: 30px;
+        height: 40px;
+        width:175px ;
+        left:140px;
 }
 .menu {
         display: flex;
@@ -41,7 +43,7 @@
         margin: 10px 0;
         background-color: #dcd4d4;
         border: 1px solid #ccc;
-        width: 290px;
+        width: 340px;
 }
 
 .menu li {
@@ -51,4 +53,32 @@
 
 .hidden {
         display: none;
+}
+.names{
+        height: 600px;
+        width: 500px;
+        background-color: beige;
+        margin: 50px;
+}
+.first-next{
+        position: relative;
+        background-color: black;
+        color: white;
+        top: 120px;
+        width:400px;
+        right: 30px;
+        height: 40px;
+}
+.back-but{
+        position: relative;
+        top: 120px;
+        width: 175px;
+        background-color: black;
+        color: white;
+        right: 230px;
+        height: 40px;
+}
+.sign{
+        border: 0px;
+        background-color: #dcd4d4;
 }
